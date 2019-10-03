@@ -53,6 +53,8 @@ def login_user():
     else:
         session['email'] = None
 
+    
+
     user = User.get_by_email(email)
     return render_template("profile.html", email=session['email'], name=user.name)
 
@@ -137,9 +139,6 @@ def chart():
         myscore.append(sentiment.score)
     #print('Text: {}'.format(text))
     #print('Sentiment: {}, {}'.format(sentiment.score, sentiment.magnitude))
-
-
-
 
     values = myscore
     print(values)
