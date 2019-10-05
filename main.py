@@ -14,6 +14,7 @@ from common.database import Database
 from pymongo import MongoClient
 
 
+
 app = Flask(__name__)
 app.secret_key = "arrow"
 
